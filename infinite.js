@@ -32,46 +32,16 @@ for (i = 0; i < Object.keys(hoverphotos).length; i++) {
 }
 aboutimagespreload = aboutimagespreload.slice(0, -1)
 
-/*
-
-if (check == false){
-	d3.selectAll("#reframe, #culture, #lens, #launched, #new, #semester, #features, #unified, #space, #platform, #beyond")
-	.on('mouseover', function() { 
-		hoverword = d3.select(this).attr("id")
-		d3.select("#hoverimg").attr("src", hoverphotos[hoverword])
-	})
-
-	d3.select("body").on('click', function(){
-		d3.select("#hoverimg").attr('src', null)
-	})	
-}
-
-if (check == true){
-
-	var clickstatus = ""
-	d3.select("body").on('click', function(){
-		if (clickstatus == "body"){
-			d3.select("#hoverimg").attr('src', null)
-		}
-		clickstatus = "body"
-		console.log(clickstatus)
-		console.log('aaslkdjfj')
-	})	
-	d3.selectAll("#reframe, #culture, #lens, #launched, #new, #semester, #features, #unified, #space, #platform, #beyond")
-		.on('click', function() { 
-			hoverword = d3.select(this).attr("id")
-			d3.select("#hoverimg").attr("src", hoverphotos[hoverword])
-			clickstatus = "img"
-			console.log(clickstatus)
-	})
-}
-*/
-
-
+//NEWS PAGE
+$(document).ready(function(){
+	var time_till = moment("20211209", "YYYYMMDD").fromNow();
+	var coundown_text = $('.countdown').text();
+	$('.countdown').text(coundown_text.replace(/Countdown/g,time_till));
+});
 
 //ISSUES PAGE SCROLL INTERACTION
-
 var maptheme = {
+	"issuenine": "CHAOS",
 	"issueeight": "LIGHT",
 	"issueseven": "STYLE",
 	"issuesix": "CONTAGIOUS",
@@ -104,9 +74,7 @@ coverimagespreload = coverimagespreload.slice(0, -1)
 var controller = new ScrollMagic.Controller();
 
 var triggeredissue
-
 $('.issuenumber').each(function () {
-
 	var scene = new ScrollMagic.Scene({
 			triggerElement: this,
 			//triggerHook: 0.8
@@ -185,8 +153,7 @@ $('.space').each(function () {
 });
 
 
-//ISSUU LINKS
-
+//ISSUE LINKS
 var issuelinks = {
 	"issueeight": "https://issuu.com/mit_infinite/docs/issue_8_master_file_final_fixed-compressed",
 	"issueseven": "https://issuu.com/mit_infinite/docs/tableofcontents_f906b4f602b4f9",
@@ -199,11 +166,9 @@ var issuelinks = {
 }
 
 //DESKTOP INTERACTION
-
 if (check == false) {
 
 	//ABOUT PAGE
-
 	d3.selectAll("#reframe, #culture, #lens, #launched, #new, #semester, #features, #unified, #space, #platform, #beyond")
 		.on('mouseover', function () {
 			hoverword = d3.select(this).attr("id")
@@ -227,15 +192,13 @@ if (check == false) {
 		window.open(issuelinks[triggeredissue], '_blank')
 	})
 }
-
 //MOBILE INTERACTION
-else if (check == true) {
+else{
 
 	var clickstatus = ""
 	var coverclickstatus = ""
 
 	//ISSUES PAGE
-
 	d3.selectAll("#cover, #coverimg").style("pointer-events", "auto")
 	d3.select("#coverimg").style("width", "43vw").style("height", "auto") //.style("margin-top", "-5vh")
 
@@ -278,7 +241,6 @@ else if (check == true) {
 
 
 //PAGES
-
 d3.select("section .row4").on("click", function () {
 	window.location = "#about"
 	preload([aboutimagespreload], aboutpage())
@@ -366,7 +328,6 @@ function pageback() {
 }
 
 
-
 //PRELOAD FUNCTION
 function preload(arrayOfImages, callback) {
 	$(arrayOfImages).each(function () {
@@ -375,31 +336,7 @@ function preload(arrayOfImages, callback) {
 	if (callback) callback()
 }
 
-
-
-
-
-/*
-	var coverclickcount = ""
-	d3.select("body").on("click", function() { 
-		coverclickcount = "body"
-	})
-	d3.selectAll(".issuenumber").on("click", function() { 
-		coverclickcount = "clickedcoveronce"
-		if (coverclickcount == "clickedcovertwice"){
-			window.open(issuelinks[triggeredissue],'_blank')
-			coverclickcount = "body"
-		}
-		else if (coverclickcount=="clickedcoveronce"){
-			coverclickcount = "clickedcovertwice"}
-		console.log(coverclickcount)
-	})
-
-}\	*/
-
-
 //CHECK URL
-
 function checkurl() {
 	if (location.hash.slice(1) === "about") {
 		preload([aboutimagespreload], aboutpage())
@@ -412,11 +349,9 @@ checkurl()
 
 
 //LOADING SPINNER
-
 $(window).on('load', function () {
 	window.setTimeout(loadpage, 1000)
 })
-
 function loadpage() {
 	$(".loading").fadeOut("slow")
 	if (location.hash.slice(1) == "") {
