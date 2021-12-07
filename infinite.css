@@ -17,7 +17,7 @@ p {
 }
 
 
-
+/* FIXME:mobile  */
 /* MAIN PAGE */
 
 #news{
@@ -638,73 +638,50 @@ span.dot.no15 {
 	}
 	
 
-	
-	section .row2 div, .row3 div, .row4 div, .row5 div{
+	section  .row3 div, .row5 div{
+		font-size: 14.5vw;
+		font-family: 'Raleway', sans-serif;
+		font-weight:900;
+		line-height: 1.05;
+		color: black;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		white-space: nowrap;
+		text-transform: uppercase;
 		animation: animate var(--animation-speed) linear infinite;
 		animation-delay: calc(-1*var(--animation-speed));
-		animation-direction: reverse;
-		font-size: 15vw;
+		animation-direction: normal;
 	}
-	section .row2 div:nth-child(2), .row4 div:nth-child(2){
-		animation: animate2 var(--animation-speed) linear infinite;
-		animation-delay: calc(-.5*var(--animation-speed));
-		animation-direction: reverse;
-	}
-
-		
-	section .row1 div {
-		/* animation: animate var(--animation-speed) linear infinite;
-		animation-delay: calc(-1*var(--animation-speed));
-		animation-direction: normal; */
-		font-size:20vw
-	}
-	/* section .row1 div:nth-child(2) {
+	section .row3 div:nth-child(2), .row5 div:nth-child(2){
 		animation: animate2 var(--animation-speed) linear infinite;
 		animation-delay: calc(-.5*var(--animation-speed));
 		animation-direction: normal;
-	} */
+	}
 
-
-	/*
-
-
-
-
-
-	section .row4 div{
+	section .row1 div{
+		font-size: 20vw
+	}
+	section  .row2 div, .row4 div{
+		font-size: 14.5vw;
+		font-family: 'Raleway', sans-serif;
+		font-weight:900;
+		line-height: 1.05;
+		color: black;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: white;
+		white-space: nowrap;
+		text-transform: uppercase;
 		animation: animate var(--animation-speed) linear infinite;
 		animation-delay: calc(-1*var(--animation-speed));
 		animation-direction: reverse;
 	}
-	section .row4 div:nth-child(2){
+	section .row2 div{
+		margin-top: 5%;
+	}
+	section .row1 div, .row2 div:nth-child(2), .row4 div:nth-child(2){
 		animation: animate2 var(--animation-speed) linear infinite;
 		animation-delay: calc(-.5*var(--animation-speed));
 		animation-direction: reverse;
 	}
-
-
-
-
-
-	section .row5 div, .row4 div, .row3 div, .row2 div {
-		animation-play-state: paused;
-	}
-	section .row5 div:nth-child(2), .row4 div:nth-child(2), .row3 div:nth-child(2), .row2 div:nth-child(2) {
-		animation-play-state: paused;
-	}
-
-	section .row5 div {
-		font-size: 15vw;
-		line-height: 1.8;
-	}
-	section .row4 div {
-		font-size: 28vw;
-		line-height: 0.9;
-	}
-	section .row3 div {
-		font-size: 14vw;
-		line-height: 2;
-	}
-	*/
 
 }

@@ -8,7 +8,7 @@ window.mobileAndTabletCheck = function () {
 };
 window.mobileAndTabletCheck()
 
-//TODO: FIX ABOUT section
+//TODO: prep for release page
 //ABOUT PAGE HOVER IMGS
 var hoverword
 var hoverphotos = {
@@ -34,7 +34,7 @@ aboutimagespreload = aboutimagespreload.slice(0, -1)
 
 //NEWS PAGE
 $(document).ready(function(){
-	var time_till = moment("20211209", "YYYYMMDD").fromNow();
+	var time_till = moment('2021-12-09T21').fromNow();
 	var coundown_text = $('.countdown').text();
 	$('.countdown').text(coundown_text.replace(/Countdown/g,time_till));
 });
