@@ -33,11 +33,19 @@ for (i = 0; i < Object.keys(hoverphotos).length; i++) {
 aboutimagespreload = aboutimagespreload.slice(0, -1)
 
 //NEWS PAGE
-$(document).ready(function(){
-	var time_till = moment('2021-12-09T21').fromNow();
-	var coundown_text = $('.countdown').text();
-	$('.countdown').text(coundown_text.replace(/Countdown/g,time_till));
-});
+if(moment().isBefore('2021-12-09T21')){
+	$('.upcoming-issue-box').css({display:'block'});
+	$('.release-box').css({display:'none'});
+	$(document).ready(function(){
+		var time_till = moment('2021-12-09T21').fromNow();
+		var coundown_text = $('.countdown').text();
+		$('.countdown').text(coundown_text.replace(/Countdown/g,time_till));
+	});
+}
+else{
+	$('.upcoming-issue-box').css({display:'none'});
+	$('.release-box').css({display:'block'});
+}
 
 //ISSUES PAGE SCROLL INTERACTION
 var maptheme = {
@@ -54,6 +62,7 @@ var maptheme = {
 
 //FIXME: these are not all the same size, causes text to stick out behind the cover of some issues
 var coverurl = {
+	"issuenine": "img/issue_9_cover.jpg",
 	"issueeight": "img/issue8cover.jpg",
 	"issueseven": "https://www.dropbox.com/s/a19lrgt6dcy9c1g/Issuesevencover.jpg?raw=1",
 	"issuesix": "https://www.dropbox.com/s/7cgdjbd8754w11v/issuesixcover.jpg?raw=1",
@@ -171,6 +180,7 @@ if (check == false) {
 	//ABOUT PAGE
 	d3.selectAll("#reframe, #culture, #lens, #launched, #new, #semester, #features, #unified, #space, #platform, #beyond")
 		.on('mouseover', function () {
+			//TODO: highlight hovered image to make effect more clear
 			hoverword = d3.select(this).attr("id")
 			d3.select("#hoverimg").attr("src", hoverphotos[hoverword])
 		})
@@ -194,7 +204,6 @@ if (check == false) {
 }
 //MOBILE INTERACTION
 else{
-
 	var clickstatus = ""
 	var coverclickstatus = ""
 
@@ -240,7 +249,7 @@ else{
 }
 
 
-//PAGES
+//PAGE LINKS //TODO: make this id-selector based, selecting by class like this is unclear and sketchy
 d3.select("section .row4").on("click", function () {
 	window.location = "#about"
 	preload([aboutimagespreload], aboutpage())
@@ -257,7 +266,7 @@ d3.selectAll(".back").on("click", function () {
 })
 
 
-
+//FADE TRANSITIONS
 function aboutpage() {
 	d3.selectAll("#issues").style("display", "none")
 	d3.select(".loading").style("display", "none")
@@ -336,7 +345,7 @@ function preload(arrayOfImages, callback) {
 	if (callback) callback()
 }
 
-//CHECK URL
+//CHECK URL //FIXME: this doesn't do anything
 function checkurl() {
 	if (location.hash.slice(1) === "about") {
 		preload([aboutimagespreload], aboutpage())
@@ -344,7 +353,6 @@ function checkurl() {
 		preload([coverimagespreload], issuespage())
 	}
 }
-//FIXME: this doesn't do anything
 checkurl()
 
 

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
+<!-- TODO: Make html more readable -->
 <head>
 	<meta charset="UTF-8" />
 	<title>INFINITE MAGAZINE</title>
-	<meta name="viewport" content="initial-scale=1" /> 
+	<meta name="viewport" content="initial-scale=1" />
 
-	<link rel="image_src" href="./img/logo.jpg"/>
-	<meta property="og:image" content = "./img/logo.jpg" />
-	<link rel="icon" href="./img/logo.jpg">
+	<link rel="image_src" href="./img/logo.jpg" />
+	<meta property="og:image" content="./img/logo.jpg" />
+	<link rel="icon" href="./img/logo.jpg" />
 	<script src="https://d3js.org/d3.v5.min.js"></script>
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js" integrity="sha512-vLs5rAqfvmv/IpN7JustROkGAvjK/L+vgVDFe7KpdtLztqF8mZDfleK2MZj/xuOrWjma0pW+lPCMcBbPKJVC7g==" crossorigin="anonymous"></script>
-	<script src = "https://unpkg.com/moment@2.29.1/moment.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"
+		integrity="sha512-vLs5rAqfvmv/IpN7JustROkGAvjK/L+vgVDFe7KpdtLztqF8mZDfleK2MZj/xuOrWjma0pW+lPCMcBbPKJVC7g=="
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/moment@2.29.1/moment.js"></script>
+	<script src="lib/confetti.min.js"></script>
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
 
-	<link rel="stylesheet" href="infinite.css" type="text/css">
+	<link rel="stylesheet" href="infinite.css" type="text/css" />
 </head>
 
 <body>
@@ -42,109 +50,209 @@
 		</div>
 	</div>
 
-	<div id = "about">
-		<div id = "abouttext">
-			Infinite is a student-run magazine seeking to <span id = "reframe">reframe</span> art, politics, <span id = "culture">culture</span>, and aesthetics through the <span id = "lens">lens</span> of fashion. It was <span id = "launched">launched</span> in print and online in early 2018, with <span id = "new">new</span> issues released approximately once per <span id = "semester">semester</span>. Each issue <span id = "features">features</span> full-page photo spreads and articles that are <span id = "unified">unified</span> under the current issue’s theme. Infinite aims to provide the <span id = "space">space</span>, resources, and <span id = "platform">platform</span> for student designers and writers to showcase their projects and experiments to the MIT community and <span id = "beyond">beyond</span>.
-			<br><span class = "back" id = "aboutback">BACK</span>
+	<div id="about">
+		<div id="abouttext">
+			Infinite is a student-run magazine seeking to
+			<span id="reframe">reframe</span> art, politics,
+			<span id="culture">culture</span>, and aesthetics through the
+			<span id="lens">lens</span> of fashion. It was
+			<span id="launched">launched</span> in print and online in early 2018,
+			with <span id="new">new</span> issues released approximately once per
+			<span id="semester">semester</span>. Each issue
+			<span id="features">features</span> full-page photo spreads and articles
+			that are <span id="unified">unified</span> under the current issue’s
+			theme. Infinite aims to provide the <span id="space">space</span>,
+			resources, and <span id="platform">platform</span> for student designers
+			and writers to showcase their projects and experiments to the MIT
+			community and <span id="beyond">beyond</span>. <br /><span class="back" id="aboutback">BACK</span>
 		</div>
-		<div id = "hoverdiv" class = "centerphoto">
-			<img id = "hoverimg" class = "centerimg">
+		<div id="hoverdiv" class="centerphoto">
+			<img id="hoverimg" class="centerimg" />
 		</div>
 	</div>
-	<div id = "news">
-	<section>
-		<div class="scroll row1">
-			<div>
-				INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;
+	<div id="news">
+		<!-- FIXME: this section tag is useless but im too lazy to remove it bc id have to refactor the css -->
+		
+			<div class="scroll row1" id="page-title">
+				<div>
+					INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
+					&nbsp;INFINITE &nbsp;INFINITE &nbsp;
+				</div>
+				<div>
+					INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
+					&nbsp;INFINITE &nbsp;INFINITE &nbsp;
+				</div>
 			</div>
-			<div>
-				INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;
+			<hr />
+			<div class="issue-box">
+				<div class="upcoming-issue-box" style="display:none;" >
+					<div class="upcoming-issue">
+						<a style="
+						text-decoration: none;
+						color: black;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+							ISSUE NINE:<br />
+							CHAOS
+						</a>
+					</div>
+					<div class="scroll row2">
+						<div>
+							<a style="
+							text-decoration: none;
+							color: black;
+							-webkit-text-stroke-color: white;
+							-webkit-text-stroke-width: 2px;" target="_blank">
+								COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
+								SOON &nbsp;
+							</a>
+						</div>
+						<div>
+							<a style="
+							text-decoration: none;
+							color: black;
+							-webkit-text-stroke-color: white;
+							-webkit-text-stroke-width: 2px;" target="_blank">
+								COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
+								SOON &nbsp;
+							</a>
+						</div>
+					</div>
+					<div class="scroll row2">
+						<div class="countdown">
+							<a style="
+						text-decoration: none;
+						color: black;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+								Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
+								&nbsp; Countdown &nbsp; Countdown &nbsp;
+							</a>
+						</div>
+						<div class="countdown">
+							<a style="
+						text-decoration: none;
+						color: black;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+								Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
+								&nbsp; Countdown &nbsp; Countdown &nbsp;
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="release-box" style="display:none;">
+					<div class="release-cover">
+						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="clear">
+						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+					</div>
+					<div class="scroll row2">
+						<div class="new-release-text">
+							<a style="
+						text-decoration: none;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+								New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
+								&nbsp; New Release &nbsp; New Release &nbsp;
+							</a>
+						</div>
+						<div class="new-release-text">
+							<a style="
+						text-decoration: none;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+								New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
+								&nbsp; New Release &nbsp; New Release &nbsp;
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div><hr>
-		<div class = "upcoming-issue-box">
-		<!-- TODO: write auto-transtion to released magazine page -->
-		<div class = "upcoming-issue">
-			<a style = "text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target = "_blank" >
-			ISSUE NINE:<br> CHAOS
-			</a>
-		</div>
-		<div class="scroll row2">
-			<div>
-				<a style="text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target="_blank">
-				COMING SOON &nbsp;  COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp;
-				</a>
+			<hr />
+			<div class="scroll row3">
+				<div>
+					PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp; PAST ISSUES
+					&nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp;PAST ISSUES &nbsp; &nbsp;
+					PAST ISSUES &nbsp;&nbsp;
+				</div>
+				<div>
+					PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES
+					&nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp; &nbsp;PAST
+					ISSUES &nbsp; &nbsp;
+				</div>
 			</div>
-			<div>
-				<a style="text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target="_blank" >
-				COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp;
-				</a>
-			</div>
-		</div>
-		<div class="scroll row2">
-			<div class = 'countdown'>
-				<a  style="text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target="_blank" >
-				Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp;
-			</a>
-			</div>
-			<div class = 'countdown'>
-				<a  style="text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target="_blank" >
-					Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown &nbsp;
-				</a>
-			</div>
-		</div>
-		</div>
-		<hr>
-		<div class="scroll row3">
-			<div>
-				PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp;PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp;&nbsp;
-			</div>
-			<div>
-				PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp; &nbsp;PAST ISSUES &nbsp; &nbsp;
-			</div>
-		</div><hr>
+			<hr />
 
-		<div class="scroll row4">
-			<div>
-				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+			<div class="scroll row4">
+				<div>
+					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+				</div>
+				<div>
+					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+				</div>
 			</div>
-			<div>
-				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
-			</div>
-		</div><hr>
+			<hr />
 
-		<div class="scroll row5">
-			<div>
-				<a style = "text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target = "_blank" href = "https://www.instagram.com/infinite_magazine">
-				INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp;
-				</a>
+			<div class="scroll row5">
+				<div>
+					<a style="
+                text-decoration: none;
+                color: black;
+                -webkit-text-stroke-color: white;
+                -webkit-text-stroke-width: 2px;" target="_blank" href="https://www.instagram.com/infinite_magazine">
+						INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
+						&nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp;
+					</a>
+				</div>
+				<div>
+					<a style="
+                text-decoration: none;
+                color: black;
+                -webkit-text-stroke-color: white;
+                -webkit-text-stroke-width: 2px;" target="_blank" href="https://www.instagram.com/infinite_magazine">
+						INSTAGRAM <i class="fab fa-instagram"></i>&nbsp; INSTAGRAM &nbsp;
+						INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
+						&nbsp;
+					</a>
+				</div>
 			</div>
-			<div>
-				<a style = "text-decoration: none; color: black; -webkit-text-stroke-color: white; -webkit-text-stroke-width: 2px;" target = "_blank" href = "https://www.instagram.com/infinite_magazine">
-					INSTAGRAM <i class="fab fa-instagram"></i>&nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp;
-				</a>
-			</div>
-		</div><hr><br><br>
-	</section>
+			<hr />
+			<br /><br />
+		
 	</div>
-	<div id = "issues" class = "issues">
-		<div id = "issuetext">ISSUE</div>
-		<div id = "issuenumber">
-			<div id = "issueeight" class = "issuenumber"><span>8</span></div><div id = "issueeight" class = "space"></div>
-			<div id = "issueseven" class = "issuenumber"><span>7</span></div><div id = "issueseven" class = "space"></div>
-			<div id = "issuesix" class = "issuenumber"><span>6</span></div><div id = "issuesix" class = "space"></div>
-			<div id = "issuefive" class = "issuenumber"><span>V</span></div><div id = "issuefive" class = "space"></div>
-			<div id = "issuefour" class = "issuenumber"><span>4</span></div><div id = "issuefour" class = "space"></div>
-			<div id = "issuethree" class = "issuenumber"><span>3</span></div><div id = "issuethree" class = "space"></div>
-			<div id = "issuetwo" class = "issuenumber"><span>2</span></div><div id = "issuetwo" class = "space"></div>
-			<div id = "issueone" class = "issuenumber"><span>1</span></div><div id = "issueone" class = "space"></div>
+	<div id="issues" class="issues">
+		<div id="issuetext">ISSUE</div>
+		<div id="issuenumber">
+			<div id="issueeight" class="issuenumber"><span>8</span></div>
+			<div id="issueeight" class="space"></div>
+			<div id="issueseven" class="issuenumber"><span>7</span></div>
+			<div id="issueseven" class="space"></div>
+			<div id="issuesix" class="issuenumber"><span>6</span></div>
+			<div id="issuesix" class="space"></div>
+			<div id="issuefive" class="issuenumber"><span>V</span></div>
+			<div id="issuefive" class="space"></div>
+			<div id="issuefour" class="issuenumber"><span>4</span></div>
+			<div id="issuefour" class="space"></div>
+			<div id="issuethree" class="issuenumber"><span>3</span></div>
+			<div id="issuethree" class="space"></div>
+			<div id="issuetwo" class="issuenumber"><span>2</span></div>
+			<div id="issuetwo" class="space"></div>
+			<div id="issueone" class="issuenumber"><span>1</span></div>
+			<div id="issueone" class="space"></div>
 		</div>
-		<div id = "issuethemedown" class = "issuetheme"></div>
-		<div id = "cover" class = "centerphoto">
-			<img id = "coverimg">
+		<div id="issuethemedown" class="issuetheme"></div>
+		<div id="cover" class="centerphoto">
+			<img id="coverimg" />
 		</div>
-		<div id = "issuesback" class = "back">BACK</div>
+		<div id="issuesback" class="back">BACK</div>
 	</div>
 
-<script type="text/javascript" src="infinite.js"></script>	
-</body>	
+	<script type="text/javascript" src="infinite.js"></script>
+</body>
+
 </html>
