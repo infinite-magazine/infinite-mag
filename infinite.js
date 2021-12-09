@@ -33,7 +33,7 @@ for (i = 0; i < Object.keys(hoverphotos).length; i++) {
 aboutimagespreload = aboutimagespreload.slice(0, -1)
 
 //NEWS PAGE
-if(moment().isAfter('2021-12-09T21')){
+if(moment().isBefore('2021-12-09T21')){
 	$('.upcoming-issue-box').css({display:'block'});
 	$('.release-box').css({display:'none'});
 	$(document).ready(function(){
