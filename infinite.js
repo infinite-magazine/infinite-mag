@@ -33,7 +33,7 @@ for (i = 0; i < Object.keys(hoverphotos).length; i++) {
 aboutimagespreload = aboutimagespreload.slice(0, -1)
 
 //NEWS PAGE
-if(moment().isBefore('2021-12-09T21')){
+if(moment().isAfter('2021-12-09T21')){
 	$('.upcoming-issue-box').css({display:'block'});
 	$('.release-box').css({display:'none'});
 	$(document).ready(function(){
@@ -45,6 +45,22 @@ if(moment().isBefore('2021-12-09T21')){
 else{
 	$('.upcoming-issue-box').css({display:'none'});
 	$('.release-box').css({display:'block'});
+	var confetti = new Confetti('confetti');
+
+	// Edit given parameters
+	confetti.setCount(75);
+	confetti.setSize(1);
+	confetti.setPower(25);
+	confetti.setFade(true);
+	confetti.destroyTarget(false); 
+
+	var confetti2 = new Confetti('clear');
+	// Edit given parameters
+	confetti2.setCount(75);
+	confetti2.setSize(1);
+	confetti2.setPower(25);
+	confetti2.setFade(true);
+	confetti2.destroyTarget(false); 
 }
 
 //ISSUES PAGE SCROLL INTERACTION
