@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <!-- TODO: Make html more readable -->
+<!-- TODO: refactor into seperate html pages linked to each other, this js is very over-engineered -->
+
 <head>
 	<meta charset="UTF-8" />
 	<title>INFINITE MAGAZINE</title>
@@ -71,159 +73,157 @@
 		</div>
 	</div>
 	<div id="news">
-		<!-- FIXME: this section tag is useless but im too lazy to remove it bc id have to refactor the css -->
-		
-			<div class="scroll row1" id="page-title">
-				<div>
-					INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
-					&nbsp;INFINITE &nbsp;INFINITE &nbsp;
-				</div>
-				<div>
-					INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
-					&nbsp;INFINITE &nbsp;INFINITE &nbsp;
-				</div>
+		<div class="scroll row1" id="page-title">
+			<div>
+				INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
+				&nbsp;INFINITE &nbsp;INFINITE &nbsp;
 			</div>
-			<hr />
-			<div class="issue-box">
-				<div class="upcoming-issue-box" style="display:none;" >
-					<div class="upcoming-issue">
+			<div>
+				INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE &nbsp;INFINITE
+				&nbsp;INFINITE &nbsp;INFINITE &nbsp;
+			</div>
+		</div>
+		<hr />
+		<div class="issue-box">
+			<div class="upcoming-issue-box" style="display:none;">
+				<div class="upcoming-issue">
+					<a style="
+						text-decoration: none;
+						color: black;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+						ISSUE NINE:<br />
+						CHAOS
+					</a>
+				</div>
+				<div class="scroll row2">
+					<div>
+						<a style="
+							text-decoration: none;
+							color: black;
+							-webkit-text-stroke-color: white;
+							-webkit-text-stroke-width: 2px;" target="_blank">
+							COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
+							SOON &nbsp;
+						</a>
+					</div>
+					<div>
+						<a style="
+							text-decoration: none;
+							color: black;
+							-webkit-text-stroke-color: white;
+							-webkit-text-stroke-width: 2px;" target="_blank">
+							COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
+							SOON &nbsp;
+						</a>
+					</div>
+				</div>
+				<div class="scroll row2">
+					<div class="countdown">
 						<a style="
 						text-decoration: none;
 						color: black;
 						-webkit-text-stroke-color: white;
 						-webkit-text-stroke-width: 2px;" target="_blank">
-							ISSUE NINE:<br />
-							CHAOS
+							Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
+							&nbsp; Countdown &nbsp; Countdown &nbsp;
 						</a>
 					</div>
-					<div class="scroll row2">
-						<div>
-							<a style="
-							text-decoration: none;
-							color: black;
-							-webkit-text-stroke-color: white;
-							-webkit-text-stroke-width: 2px;" target="_blank">
-								COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
-								SOON &nbsp;
-							</a>
-						</div>
-						<div>
-							<a style="
-							text-decoration: none;
-							color: black;
-							-webkit-text-stroke-color: white;
-							-webkit-text-stroke-width: 2px;" target="_blank">
-								COMING SOON &nbsp; COMING SOON &nbsp; COMING SOON &nbsp; COMING
-								SOON &nbsp;
-							</a>
-						</div>
-					</div>
-					<div class="scroll row2">
-						<div class="countdown">
-							<a style="
+					<div class="countdown">
+						<a style="
 						text-decoration: none;
 						color: black;
 						-webkit-text-stroke-color: white;
 						-webkit-text-stroke-width: 2px;" target="_blank">
-								Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
-								&nbsp; Countdown &nbsp; Countdown &nbsp;
-							</a>
-						</div>
-						<div class="countdown">
-							<a style="
-						text-decoration: none;
-						color: black;
-						-webkit-text-stroke-color: white;
-						-webkit-text-stroke-width: 2px;" target="_blank">
-								Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
-								&nbsp; Countdown &nbsp; Countdown &nbsp;
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="release-box" style="display:none;">
-					<div class="release-cover">
-						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
-						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
-						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="clear">
-						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
-						<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
-					</div>
-					<div class="scroll row2" id = "confetti">
-						<div class="new-release-text">
-							<a style="
-						text-decoration: none;
-						-webkit-text-stroke-color: white;
-						-webkit-text-stroke-width: 2px;" target="_blank">
-								New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
-								&nbsp; New Release &nbsp; New Release &nbsp;
-							</a>
-						</div>
-						<div class="new-release-text">
-							<a style="
-						text-decoration: none;
-						-webkit-text-stroke-color: white;
-						-webkit-text-stroke-width: 2px;" target="_blank">
-								New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
-								&nbsp; New Release &nbsp; New Release &nbsp;
-							</a>
-						</div>
+							Countdown &nbsp; Countdown &nbsp; Countdown &nbsp; Countdown
+							&nbsp; Countdown &nbsp; Countdown &nbsp;
+						</a>
 					</div>
 				</div>
 			</div>
-			<hr />
-			<div class="scroll row3">
-				<div>
-					PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp; PAST ISSUES
-					&nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp;PAST ISSUES &nbsp; &nbsp;
-					PAST ISSUES &nbsp;&nbsp;
+			<div class="release-box" style="display:none;">
+				<div class="release-cover">
+					<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+					<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+					<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="clear">
+					<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
+					<img src="img/issue_9_cover.jpg" alt="issue 9 CHAOS" id="blur">
 				</div>
-				<div>
-					PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES
-					&nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp; &nbsp;PAST
-					ISSUES &nbsp; &nbsp;
+				<div class="scroll row2" id="confetti">
+					<div class="new-release-text">
+						<a style="
+						text-decoration: none;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+							New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
+							&nbsp; New Release &nbsp; New Release &nbsp;
+						</a>
+					</div>
+					<div class="new-release-text">
+						<a style="
+						text-decoration: none;
+						-webkit-text-stroke-color: white;
+						-webkit-text-stroke-width: 2px;" target="_blank">
+							New Release &nbsp; New Release &nbsp; New Release &nbsp; New Release
+							&nbsp; New Release &nbsp; New Release &nbsp;
+						</a>
+					</div>
 				</div>
 			</div>
-			<hr />
+		</div>
+		<hr />
+		<div class="scroll row3">
+			<div>
+				PAST ISSUES &nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp; PAST ISSUES
+				&nbsp; &nbsp; PAST ISSUES &nbsp; &nbsp;PAST ISSUES &nbsp; &nbsp;
+				PAST ISSUES &nbsp;&nbsp;
+			</div>
+			<div>
+				PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES
+				&nbsp;&nbsp; PAST ISSUES &nbsp;&nbsp; PAST ISSUES &nbsp; &nbsp;PAST
+				ISSUES &nbsp; &nbsp;
+			</div>
+		</div>
+		<hr />
 
-			<div class="scroll row4">
-				<div>
-					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
-					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
-				</div>
-				<div>
-					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
-					ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
-				</div>
+		<div class="scroll row4">
+			<div>
+				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
 			</div>
-			<hr />
+			<div>
+				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+				ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp; ABOUT &nbsp;
+			</div>
+		</div>
+		<hr />
 
-			<div class="scroll row5">
-				<div>
-					<a style="
+		<div class="scroll row5">
+			<div>
+				<a style="
                 text-decoration: none;
                 color: black;
                 -webkit-text-stroke-color: white;
                 -webkit-text-stroke-width: 2px;" target="_blank" href="https://www.instagram.com/infinite_magazine">
-						INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
-						&nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp;
-					</a>
-				</div>
-				<div>
-					<a style="
+					INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
+					&nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp;
+				</a>
+			</div>
+			<div>
+				<a style="
                 text-decoration: none;
                 color: black;
                 -webkit-text-stroke-color: white;
                 -webkit-text-stroke-width: 2px;" target="_blank" href="https://www.instagram.com/infinite_magazine">
-						INSTAGRAM <i class="fab fa-instagram"></i>&nbsp; INSTAGRAM &nbsp;
-						INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
-						&nbsp;
-					</a>
-				</div>
+					INSTAGRAM <i class="fab fa-instagram"></i>&nbsp; INSTAGRAM &nbsp;
+					INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM &nbsp; INSTAGRAM
+					&nbsp;
+				</a>
 			</div>
-			<hr />
-			<br /><br />
-		
+		</div>
+		<hr />
+		<br /><br />
+
 	</div>
 	<div id="issues" class="issues">
 		<div id="issuetext">ISSUE</div>

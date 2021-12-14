@@ -108,11 +108,11 @@ $('.issuenumber').each(function () {
 			triggeredissue = $(event.target.triggerElement()).attr('id')
 			d3.select("#coverimg").attr("src", coverurl[triggeredissue]).style("display", "block")
 			d3.select("#issuethemedown").text(maptheme[triggeredissue])
-			if (maptheme[triggeredissue].length > 5) {
-				textFit($('#issuethemedown'), {
-					widthOnly: true
-				})
-			}
+			// if (maptheme[triggeredissue].length > 5) {
+			// 	textFit($('#issuethemedown'), {
+			// 		widthOnly: true
+			// 	})
+			// }
 			d3.select("#issues").style("background-color", "black")
 			d3.select("body").style("background-color", "black")
 			d3.selectAll(".issuenumber, .issuetheme, #issuetext, #issuesback").style("color", "white")
@@ -266,17 +266,20 @@ else{
 
 
 //PAGE LINKS //TODO: make this id-selector based, selecting by class like this is unclear and sketchy
-d3.select("section .row4").on("click", function () {
+d3.select(".row4").on("click", function () {
+	console.log("click detected");
 	window.location = "#about"
 	preload([aboutimagespreload], aboutpage())
 })
 
-d3.select("section .row3").on("click", function () {
+d3.select(".row3").on("click", function () {
+	console.log("click detected");
 	window.location = "#issues"
 	preload([coverimagespreload], issuespage())
 })
 
 d3.selectAll(".back").on("click", function () {
+	console.log("click detected");
 	window.location = ""
 	pageback()
 })
