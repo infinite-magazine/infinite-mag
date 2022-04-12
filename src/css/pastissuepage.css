@@ -1,4 +1,3 @@
-
 /* ISSUES PAGE */
 #issuetext {
 	font-family: 'Overpass', sans-serif;
@@ -18,21 +17,21 @@
 
 .issuetheme {
 	font-family: 'Overpass', sans-serif;
-font-size: min(8.4vw, 100px);
-font-weight: 200;
--webkit-text-stroke-width: 0px;
--webkit-text-stroke-color: black;
-color: black;
-text-align: right;
-position: -webkit-sticky;
-position: sticky;
-align-self: flex-start;
-margin-left: auto;
-min-width: 24.7vw;
-max-width: 24.7vw;
-width: 23.5vw;
-height: 10vw;
-padding: 0;
+	font-size: min(8.4vw, 100px);
+	font-weight: 200;
+	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	color: black;
+	text-align: right;
+	position: -webkit-sticky;
+	position: sticky;
+	align-self: flex-start;
+	margin-left: auto;
+	min-width: 24.7vw;
+	max-width: 24.7vw;
+	width: 23.5vw;
+	height: 10vw;
+	padding: 0;
 }
 
 #issuethemedown {
@@ -74,22 +73,26 @@ padding: 0;
 
 #coverimg {
 	width: 100vw;
-	height:auto;
+	height: auto;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	/* z-index: 999; */
 	filter: blur(5px);
 	pointer-events: none;
+	position: fixed;
+	z-index: -1;
+	top: 0%;
+	left: 0%;
 }
 
 #cover {
 	pointer-events: none;
-	position:fixed;
+	position: fixed;
 	z-index: -1;
-    top:0%;
-    left:0%;
-	
+	top: 0%;
+	left: 0%;
+	transition-duration: 500ms;
 }
 
 #issuesback {
@@ -104,10 +107,24 @@ padding: 0;
 }
 
 @media screen and (max-width: 566px) {
-	#issuenumber{
+	#issuenumber {
 		font-size: 20vh;
+		margin-left: 12.5vw;
 	}
-	#issuetext{
-		font-size: 7vw;
+
+	#issuetext {
+		font-size: min(8.4vw, 100px);
+	}
+
+	.issuetheme{
+		margin-left: 5vw;
+	}
+
+	#coverimg{
+		height: 100vh;
+		width: auto;
+	}
+	#issuesback{
+		color: white;
 	}
 }

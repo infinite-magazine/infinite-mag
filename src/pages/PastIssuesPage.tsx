@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../css/pastissuepage.css';
 
 //FIXME: migrate past issues js logic
@@ -33,7 +33,6 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 	const [issuePos, setIssuePos] = useState(0);
 	const scroll = useScroll();
 	const [hoverRef, isHovered] = useHover();
-	const nav = useNavigate();
 
 	useEffect(() => {
 		let issPos = Math.round(scroll / window.innerHeight)
@@ -42,10 +41,10 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 
 	return (
 		<div id="issues" className="issues">
-			<div id="issuetext" style={{color: isHovered? 'white':'black'}}>ISSUE</div>
+			<div id="issuetext" style={{color: (isHovered || props.isMobile)? 'white':'black'}}>ISSUE</div>
 			{/*@ts-ignore */}
 			<div id = 'issue' ref={hoverRef}>
-			<div id="issuenumber" style={{color: isHovered? 'white':'black'}}
+			<div id="issuenumber" style={{color: (isHovered || props.isMobile)? 'white':'black'}}
 			onClick = {()=> window.location.href = links[8-issuePos]}> 
 				<div id="issueeight" className="issuenumber"><span>9</span></div>
 				<div id="issueeight" className="space"></div>
@@ -66,11 +65,11 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 				<div id="issueone" className="issuenumber"><span>1</span></div>
 				<div id="issueone" className="space"></div>
 			</div>
-			<div id="cover" className="centerphoto" style={{opacity:isHovered?'100%':'0%', }}>
+			<div id="cover" className="centerphoto" style={{opacity:(isHovered || props.isMobile)?'100%':'0%', }}>
 				<img id="coverimg" alt='magazine cover' src={img_links[8 - issuePos]} />
 			</div>
 			</div>
-			<div id="issuethemedown" className="issuetheme" style={{color: isHovered? 'white':'black'}}>{themes[8 - issuePos]}</div>
+			<div id="issuethemedown" className="issuetheme" style={{color: (isHovered||props.isMobile)? 'white':'black'}}>{themes[8 - issuePos]}</div>
 			
 			<Link to='/' id='issuesback'>BACK</Link>
 		</div>
@@ -93,7 +92,7 @@ const useScroll = () => {
 	return scroll;
 };
 
-// Hook
+// typescript hates this hook for some reason
 // @ts-ignore
 function useHover() {
 	const [value, setValue] = useState(false);
