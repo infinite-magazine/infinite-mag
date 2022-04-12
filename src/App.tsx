@@ -13,11 +13,12 @@ function mobileAndTabletCheck() {
 };
 
 function App() {
-  const mobile = mobileAndTabletCheck();
+  const mobile = mobileAndTabletCheck(); //TODO: just use media queries not react
   return (
     <Routes>
       <Route path='/' element={<Pages.HomePage isMobile={mobile}/>} />
       <Route path='/about' element={<Pages.AboutPage isMobile={mobile}/>} />
+      <Route path='/past-issues' element={<Pages.PastIssuesPage isMobile={mobile}/>} />
     </Routes>
   );
     
