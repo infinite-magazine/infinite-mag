@@ -9,6 +9,9 @@
 	overflow-x: hidden;
 	background-color: black;
 }
+.links{
+	cursor: pointer;
+}
 @media screen and (max-width: 566px) {
 .homepage .ticker{
 	padding: 5%;

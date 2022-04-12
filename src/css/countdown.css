@@ -1,12 +1,11 @@
 .countdown{
-min-height: 60vh;
-justify-content: center;
-z-index: -1;
-padding:3%;
+    min-height: 60vh;
+    justify-content: center;
+    z-index: -1;
+    padding:3%;
 }
 
 .dimension{
-    position: relative;
 
     align-content: center;
     vertical-align: center;
@@ -30,6 +29,7 @@ padding:3%;
 	-webkit-text-stroke-color: white;
 
     animation: expansion calc(var(--animation-speed)/10) ease infinite;
+    animation-direction: normal;
 }
 #dim-1{
     animation-delay: 500ms;
@@ -99,10 +99,12 @@ padding:3%;
     .issue-title{
         font-size: 15vw;
         min-height: 20vh;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
     }
     .dimension{
         top:15%;
-        animation-duration: calc(var(--animation-speed)/15);
+        animation-duration: calc(var(--animation-speed)/11);
     }
     .t-minus{
         font-size: 15vw;

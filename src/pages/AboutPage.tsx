@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/aboutpage.css';
-
+//FIXME: about page on mobile
 const AboutPage = (props:{isMobile:boolean}) => {
   return (
     <div id="about">

@@ -4,6 +4,7 @@ import '../css/ticker.css';
 interface TickerProps{
     title:string,
     fontSize:string,
+    id?: string,
     direction?: 'normal' | 'reverse',
     link?: string,
     textColor?: string,
@@ -23,6 +24,7 @@ const TickerTape = (props:TickerProps) => {
     };
     return(
         <div className="ticker" 
+        id={props.id}
         style = {{background:props.bgColor, color:props.textColor}}
         onClick = {() => {
             if(!props.link) return;
