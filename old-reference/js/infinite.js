@@ -180,6 +180,7 @@ $('.space').each(function () {
 
 //ISSUE LINKS
 var issuelinks = {
+	"issuenine": "https://issuu.com/mit_infinite/docs/issue9_masterfile_small",
 	"issueeight": "https://issuu.com/mit_infinite/docs/issue_8_master_file_final_fixed-compressed",
 	"issueseven": "https://issuu.com/mit_infinite/docs/tableofcontents_f906b4f602b4f9",
 	"issuesix": "https://issuu.com/mit_infinite/docs/infinite_part_1",
