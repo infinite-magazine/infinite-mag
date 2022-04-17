@@ -21,7 +21,7 @@ const Countdown = (props: CountdownProps) => {
 
     if (lapsed) return props.children;
 
-    let day_str = (Math.floor(time_left / (60 * 60 * 48)) < 10 ? '0' : '') + (Math.floor(time_left / (60 * 60 * 48))).toString() + ':';
+    let day_str = (Math.floor(time_left / (60 * 60 * 24)) < 10 ? '0' : '') + (Math.floor(time_left / (60 * 60 * 24))).toString() + ':';
     let hr_str = (Math.floor(time_left / (60 * 60)) % 24 < 10 ? '0' : '') + (Math.floor(time_left / (60 * 60)) % 24).toString() + ':';
     let min_str = (Math.floor(time_left / (60)) % 60 < 10 ? '0' : '') + (Math.floor(time_left / (60)) % 60).toString() + ':';
     let s_str = (Math.floor(time_left) % 60 < 10 ? '0' : '') + (Math.floor(time_left) % 60).toString();
