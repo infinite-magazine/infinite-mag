@@ -7,17 +7,17 @@ const HomePage = (props:{isMobile:boolean}) =>{
     return (
         <div className = 'homepage'>
         {/*TODO: stop using isMobile in react and use ids passed to css media queries */}
-        <TickerTape title = 'INFINITE' id='title' fontSize={props.isMobile?'26.5vw':'26.5vh'} bgColor='white' textColor='black'/>
+        <TickerTape title = 'INFINITE' id='title'/>
         <Countdown release_date={releaseDate}>
             {/* <MagazinePedestal  alt_text='INFINITE MAGAZINE ISSUE X: DIMENSIONS'/> */}
         </Countdown>
         <div className = 'links'>
             <hr/>
-            <TickerTape title = 'ABOUT' link='/about' fontSize={props.isMobile?'14.5vw':'14.5vh'} direction='reverse'/>
+            <TickerTape title = 'ABOUT' link='/about' id = 'banner'  direction='reverse'/>
             <hr/>
-            <TickerTape title = 'PAST ISSUES' link='/past-issues' fontSize={props.isMobile?'14.5vw':'14.5vh'} />
+            <TickerTape title = 'PAST ISSUES' link='/past-issues' id = 'banner'  />
             <hr/>
-            <TickerTape title = 'INSTAGRAM' link='https://www.instagram.com/infinite_magazine' fontSize={props.isMobile?'14.5vw':'14.5vh'} direction='reverse'/>
+            <TickerTape title = 'INSTAGRAM' link='https://www.instagram.com/infinite_magazine' id = 'banner'  direction='reverse'/>
         </div>
         </div>
     );

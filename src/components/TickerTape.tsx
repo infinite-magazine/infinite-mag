@@ -3,7 +3,7 @@ import '../css/ticker.css';
 
 interface TickerProps{
     title:string,
-    fontSize:string,
+    fontSize?:string,
     id?: string,
     direction?: 'normal' | 'reverse',
     link?: string,
@@ -14,14 +14,16 @@ interface TickerProps{
 //TODO: looping could be better
 const TickerTape = (props:TickerProps) => {
     const nav = useNavigate();
-    const custom_style = {
-        fontSize: props.fontSize,
+    const custom_style:any = {
         animationDirection: props.direction,
 
         '&:hover':{ //FIXME: ticker hover
             background: 'white'
         }
     };
+    if(props.fontSize !== null){
+        custom_style.fontSize = props.fontSize;
+    }
     return(
         <div className="ticker" 
         id={props.id}
@@ -44,4 +46,5 @@ const TickerTape = (props:TickerProps) => {
     );
 }
 export default TickerTape;
+
 

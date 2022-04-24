@@ -4,16 +4,20 @@
     z-index: -1;
     padding:3%;
 }
-
-.dimension{
-
+.dimension-container{
+    position:relative;
+    margin-top:-10%;
+    height:100%;
+    width:100%;
     align-content: center;
     vertical-align: center;
     text-align: center;
-
     justify-items: center;
+}
+
+.dimension{
+    text-align: center;
     position:absolute;
-    top:12%;
     left:0;
     width:100%;
 
@@ -63,7 +67,7 @@
 .issue-title{
     position:relative;
     z-index: 2;
-    margin-top: auto;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
@@ -99,11 +103,10 @@
     .issue-title{
         font-size: 15vw;
         min-height: 20vh;
-	-webkit-text-stroke-width: 2px;
-	-webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
     }
     .dimension{
-        top:15%;
         animation-duration: calc(var(--animation-speed)/11);
     }
     .t-minus{

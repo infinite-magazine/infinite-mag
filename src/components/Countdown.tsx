@@ -10,13 +10,13 @@ interface CountdownProps {
 const Countdown = (props: CountdownProps) => {
     const [time_left, setTimeLeft] = useState(1);
     const [lapsed, setLapsed] = useState(false);
-
     useEffect(() => {
         const interval_id = setInterval(() => {
             setLapsed(new Date() >= props.release_date);
             var dif = (props.release_date.getTime() - (new Date()).getTime()) / 1000;
             setTimeLeft(dif);
         }, 1000);
+
     });
 
     if (lapsed) return props.children;
@@ -28,17 +28,18 @@ const Countdown = (props: CountdownProps) => {
 
     return (
         <div className='countdown' >
-            <div>
+            <div className='dimension-container'>
                 <div className='dimension' id='dim-1'>X</div>
                 <div className='dimension' id='dim-2'>X</div>
                 <div className='dimension' id='dim-3'>X</div>
                 <div className='dimension' id='dim-4'>X</div>
                 <div className='dimension' id='dim-5'>X</div>
-
-                <div className='issue-title' >
-                    ISSUE X <br /> DIMENSIONS
-                </div>
             </div>
+
+            <div className='issue-title' >
+                ISSUE X <br /> DIMENSIONS
+            </div>
+
             <div className='t-minus'>
                 {/* TODO: pad 1 digit elements with a 0 */}
                 {day_str + hr_str + min_str + s_str}
