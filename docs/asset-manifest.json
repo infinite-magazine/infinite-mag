@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/INFINITE.MAGAZINE/static/css/main.c7a5b5fb.css",
-    "main.js": "/INFINITE.MAGAZINE/static/js/main.d69cf4be.js",
-    "index.html": "/INFINITE.MAGAZINE/index.html",
-    "main.c7a5b5fb.css.map": "/INFINITE.MAGAZINE/static/css/main.c7a5b5fb.css.map",
-    "main.d69cf4be.js.map": "/INFINITE.MAGAZINE/static/js/main.d69cf4be.js.map"
+    "main.css": "/static/css/main.6c6455f6.css",
+    "main.js": "/static/js/main.2a2d097b.js",
+    "index.html": "/index.html",
+    "main.6c6455f6.css.map": "/static/css/main.6c6455f6.css.map",
+    "main.2a2d097b.js.map": "/static/js/main.2a2d097b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7a5b5fb.css",
-    "static/js/main.d69cf4be.js"
+    "static/css/main.6c6455f6.css",
+    "static/js/main.2a2d097b.js"
   ]
 }
