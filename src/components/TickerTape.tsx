@@ -3,12 +3,9 @@ import '../css/ticker.css';
 
 interface TickerProps{
     title:string,
-    fontSize?:string,
     id?: string,
     direction?: 'normal' | 'reverse',
-    link?: string,
-    textColor?: string,
-    bgColor?: string
+    link?: string
 }
 
 //TODO: looping could be better
@@ -21,13 +18,10 @@ const TickerTape = (props:TickerProps) => {
             background: 'white'
         }
     };
-    if(props.fontSize !== null){
-        custom_style.fontSize = props.fontSize;
-    }
+    
     return(
         <div className="ticker" 
         id={props.id}
-        style = {{background:props.bgColor, color:props.textColor}}
         onClick = {() => {
             if(!props.link) return;
             if(props.link.includes('http')){ 

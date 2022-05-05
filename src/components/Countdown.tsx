@@ -12,11 +12,10 @@ const Countdown = (props: CountdownProps) => {
     const [lapsed, setLapsed] = useState(false);
     useEffect(() => {
         const interval_id = setInterval(() => {
-            setLapsed(new Date() >= props.release_date);
+            if(!lapsed){setLapsed(new Date() >= props.release_date);}
             var dif = (props.release_date.getTime() - (new Date()).getTime()) / 1000;
             setTimeLeft(dif);
         }, 1000);
-
     });
 
     if (lapsed) return props.children;
