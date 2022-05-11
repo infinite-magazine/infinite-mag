@@ -12,25 +12,25 @@ const MagazinePedestal = (props:PedestalProps) => {
         <div className = 'pedestal'>
             <div className='container-container'>
                 <div className='cov-dimension-container' id='cov-side'>
-                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
                 </div>
                 <div className='cov-dimension-container' id='cov-center'>
-                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
                 </div>
                 <div className='cov-dimension-container' id = 'cov-side'>
-                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
-                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.png' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-1'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-2'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-3'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-4'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
+                    <div className='cov-dimension' id='cdim-5'><img src = 'images/issueXcover.jpg' alt={props.alt_text}/></div>
                 </div>
             </div>
             <TickerTape id='cov-banner' title='ISSUE X OUT NOW' />
