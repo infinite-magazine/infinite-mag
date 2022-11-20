@@ -44,7 +44,7 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 			{/*@ts-ignore */}
 			<div id = 'issue' ref={hoverRef}>
 				<div id="issuenumber" style={{color: (isHovered || props.isMobile)? 'white':'black'}}
-				onClick = {()=> window.location.href = links[10-issuePos]}> 
+				onClick = {()=> window.location.href = links[themes.length-issuePos - 1]}> 
 					{themes.map((theme, idx)=>{
 						return(
 							<div>

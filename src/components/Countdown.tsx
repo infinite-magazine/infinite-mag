@@ -29,10 +29,10 @@ const Countdown = (props: CountdownProps) => {
         <div className='countdown' >
             <div className='dimension-container'>
                 <div className='dimension' id='dim-1'>XI</div>
-                {/* <div className='dimension' id='dim-2'>X</div>
-                <div className='dimension' id='dim-3'>X</div>
-                <div className='dimension' id='dim-4'>X</div>
-                <div className='dimension' id='dim-5'>X</div> */}
+                <div className='dimension' id='dim-2'>XI</div>
+                <div className='dimension' id='dim-3'>XI</div>
+                <div className='dimension' id='dim-4'>XI</div>
+                <div className='dimension' id='dim-5'>XI</div>
             </div>
 
             <div className='issue-title' >

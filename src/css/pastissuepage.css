@@ -111,7 +111,7 @@
 @media screen and (max-width: 566px) {
 	#issuenumber {
 		font-size: 20vh;
-		margin-left: 12.5vw;
+		margin-left: 0;
 	}
 
 	#issuetext {
@@ -123,8 +123,8 @@
 	}
 
 	#coverimg{
-		height: 100vh;
-		width: auto;
+		height: 120vh;
+		width: auto; 
 	}
 	#issuesback{
 		color: white;
