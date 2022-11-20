@@ -29,8 +29,8 @@
 	position: sticky;
 	align-self: flex-start;
 	margin-left: auto;
-	min-width: 24.7vw;
-	max-width: 24.7vw;
+	/* min-width: 24.7vw;
+	max-width: 24.7vw; */
 	width: 23.5vw;
 	height: 10vw;
 	padding: 0;
@@ -58,7 +58,7 @@
 	margin-top: 43vh;
 	padding-bottom: 0vh;
 	margin-bottom: 0vh;
-	margin-left: 5vw;
+	margin-left: 12.5vw;
 	display: inline-block;
 	cursor: pointer;
 	line-height: 13vh;

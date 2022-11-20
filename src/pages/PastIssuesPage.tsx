@@ -2,9 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/pastissuepage.css';
 
-//FIXME: migrate past issues js logic
-//TODO: add issue 9
-
 const links = [
 	"https://issuu.com/mit_infinite/docs/infinite_issue_1",
 	"https://issuu.com/mit_infinite/docs/infinite_issue_2",
@@ -17,7 +14,7 @@ const links = [
 	"https://issuu.com/mit_infinite/docs/issue9_masterfile_small",
 	"https://issuu.com/mit_infinite/docs/issuex"
 ];
-const themes = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'CONTAGIOUS', 'STYLE', 'LIGHT', 'CHAOS', 'DIMENSIONS'];
+const themes = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'CONTAG\nIOUS', 'STYLE', 'LIGHT', 'CHAOS', 'DIMEN\nSIONS'];
 const img_links = [
 	"https://www.dropbox.com/s/8a8wrdm0tttg3rv/issueonecover.jpg?raw=1",
 	"https://www.dropbox.com/s/v3ccczh2uoanlm2/issuetwocover.jpg?raw=1",
