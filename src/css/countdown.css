@@ -32,8 +32,8 @@
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: white;
 
-    animation: expansion calc(var(--animation-speed)/10) ease infinite;
-    animation-direction: normal;
+    /* animation: expansion calc(var(--animation-speed)/10) ease infinite;
+    animation-direction: normal; */
 }
 #dim-1{
     animation-delay: 500ms;

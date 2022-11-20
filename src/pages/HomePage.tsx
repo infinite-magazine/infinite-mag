@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import {TickerTape, Countdown, MagazinePedestal} from '../components';
 import '../css/homepage.css';
 
-const releaseDate = new Date(2022,4,10,17);
+const releaseDate = new Date(2023,5,10, 20);
 const HomePage = (props:{isMobile:boolean}) =>{
     return (
         <div className = 'homepage'>

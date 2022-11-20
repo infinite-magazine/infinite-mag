@@ -16,6 +16,8 @@
 }
 
 .issuetheme {
+	/* writing-mode: vertical-rl;
+	text-orientation: upright; */
 	font-family: 'Overpass', sans-serif;
 	font-size: min(8.4vw, 100px);
 	font-weight: 200;
@@ -56,7 +58,7 @@
 	margin-top: 43vh;
 	padding-bottom: 0vh;
 	margin-bottom: 0vh;
-	margin-left: 20vw;
+	margin-left: 5vw;
 	display: inline-block;
 	cursor: pointer;
 	line-height: 13vh;
