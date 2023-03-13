@@ -54,6 +54,7 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 						);
 					})}
 				</div>
+				{/** TODO: migrate to css media query, remove props */}
 				<div id="cover" className="centerphoto" style={{opacity:(isHovered || props.isMobile)?'100%':'0%', }}>
 					<img id="coverimg" alt='magazine cover' src={img_links[themes.length - issuePos - 1]} />
 				</div>

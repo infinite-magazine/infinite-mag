@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/aboutpage.css';
 
-const AboutPage = (props: { isMobile: boolean }) => {
+const AboutPage = () => {
   return (
     <div id="about">
       <div id="abouttext">
