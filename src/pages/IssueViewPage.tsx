@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page, pdfjs } from 'react-pdf';
+
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import "../css/issueviewpage.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
+
 const IssueViewPage = () => {
     let params = useParams();
     const [numPages, setNumPages] = useState(0);
