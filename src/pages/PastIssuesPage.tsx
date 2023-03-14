@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import '../css/pastissuepage.css';
 
 const links = [
@@ -32,6 +32,7 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 	const [issuePos, setIssuePos] = useState(0);
 	const scroll = useScroll();
 	const [hoverRef, isHovered] = useHover();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		let issPos = Math.round(scroll / window.innerHeight)
@@ -44,7 +45,8 @@ function PastIssuesPage(props: { isMobile: boolean }) {
 			{/*@ts-ignore */}
 			<div id = 'issue' ref={hoverRef}>
 				<div id="issuenumber" style={{color: (isHovered || props.isMobile)? 'white':'black'}}
-				onClick = {()=> window.location.href = links[themes.length-issuePos - 1]}> 
+				onClick = {e=>{navigate("/issue-view/"+(themes.length-issuePos).toString())}}
+				> 
 					{themes.map((theme, idx)=>{
 						return(
 							<div>
